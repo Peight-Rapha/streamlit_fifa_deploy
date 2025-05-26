@@ -17,7 +17,7 @@ df_filtered = df_data[df_data['Club'] == club].set_index('Name')
 
 
 posicoes = df_filtered['Position'].unique()
-posicao = st.sidebar.selectbox("Position", clubes)
+posicao = st.sidebar.selectbox("Position", posicoes)
 st.markdown(f"**Posição:** {df_filtered['Position'].values[0]}")
 # filtrando pela posição
 df_filtered = df_filtered[df_filtered['Position'] == df_filtered['Position'].values[0]]
