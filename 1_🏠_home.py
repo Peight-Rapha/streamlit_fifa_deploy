@@ -14,7 +14,7 @@ st.markdown("# FIFA23 OFFICIAL DATASET ⚽")
 st.sidebar.markdown("Desenvolvido por Raphael Silva")
 
 if "data" not in st.session_state:
-    df_data = pd.read_csv("C:\\asimov\\Streamlit\\Projeto Streamlit FIFA - Raphael\\datasets\\CLEAN_FIFA23_official_data.csv", index_col=0)
+    df_data = pd.read_csv("\\datasets\\CLEAN_FIFA23_official_data.csv", index_col=0)
     df_data = df_data[df_data["Contract Valid Until"] > datetime.today().year]
     ##df_data.columns
     df_data = df_data[df_data['Value(£)'] > 0]
